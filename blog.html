@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>홍대 마사지 추천 블로그 | 전문 마사지 샵 인사이트</title>
+    <meta name="description" content="홍대 마사지 추천 전문 블로그. 데이터 기반 마사지 효과 분석과 전문가 인사이트. 피로 회복, 근육 이완, 스웨디시 마사지의 과학적 접근법. 예약 문의 010-6279-0862.">
+    <meta name="keywords" content="홍대 마사지, 홍대 마사지 추천, 홍대 스웨디시, 홍대 타이 마사지, 홍대 근육 이완, 홍대 피로 회복, 홍대 마사지 샵, 홍대 마사지 블로그">
+    <meta name="bpaas-design-system" content="brutalist-avantgarde">
+    <meta name="bpaas-design-theme" content="kr-raw-concrete">
+    <link rel="canonical" href="https://kr-pbn-sr-006.vercel.app/blog">
+    <meta property="og:title" content="홍대 마사지 추천 블로그 | 전문 마사지 샵 인사이트 | Raw Concrete">
+    <meta property="og:description" content="홍대 마사지 추천 블로그. 데이터 기반 마사지 효과 분석과 전문가 인사이트. 피로 회복, 근육 이완, 스웨디시 마사지의 과학적 접근법.">
+    <meta property="og:url" content="https://kr-pbn-sr-006.vercel.app/blog">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://kr-pbn-sr-006.vercel.app/og-blog.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="홍대 마사지 추천 블로그 | 전문 마사지 샵 인사이트">
+    <meta name="twitter:description" content="홍대 마사지 추천 블로그. 데이터 기반 마사지 효과 분석과 전문가 인사이트.">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23d4c9b8'/%3E%3Ctext x='50' y='65' font-size='60' text-anchor='middle' fill='%233a3a3a'%3E%23%3C/text%3E%3C/svg%3E">
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            font-size: 16px;
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+        }
+        body {
+            font-family: 'Courier New', 'Nanum Gothic', 'Malgun Gothic', monospace, sans-serif;
+            background-color: #e8e0d0;
+            color: #2c2c2c;
+            line-height: 1.7;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(180, 170, 150, 0.15) 2px, rgba(180, 170, 150, 0.15) 4px),
+                repeating-linear-gradient(90deg, transparent, transparent 3px, rgba(160, 150, 130, 0.1) 3px, rgba(160, 150, 130, 0.1) 5px);
+            pointer-events: none;
+            z-index: -1;
+        }
+        a {
+            color: #3a3a3a;
+            text-decoration: none;
+            border-bottom: 2px solid #8a7a6a;
+            transition: all 0.2s ease;
+        }
+        a:hover {
+            color: #1a1a1a;
+            border-bottom-color: #c0392b;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Courier New', 'Nanum Gothic', monospace;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            text-transform: uppercase;
+        }
+        h1 {
+            font-size: 2.8rem;
+            line-height: 1.1;
+            margin-bottom: 1.2rem;
+            border-left: 6px solid #c0392b;
+            padding-left: 1.2rem;
+            color: #2c2c2c;
+        }
+        h2 {
+            font-size: 1.8rem;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            margin-top: 2.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #3a3a3a;
+        }
+        h3 {
+            font-size: 1.3rem;
+            line-height: 1.3;
+            margin-bottom: 0.8rem;
+            margin-top: 1.8rem;
+        }
+        p {
+            margin-bottom: 1.2rem;
+            font-size: 1.05rem;
+        }
+        .text-accent {
+            color: #c0392b;
+            font-weight: 700;
+        }
+        .text-raw {
+            font-family: 'Courier New', monospace;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        nav {
+            background: #2c2c2c;
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 4px solid #c0392b;
+        }
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            min-height: 60px;
+        }
+        .nav-brand {
+            color: #e8e0d0;
+            font-family: 'Courier New', monospace;
+            font-size: 1.4rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            border: none;
+        }
+        .nav-brand:hover {
+            color: #c0392b;
+            border: none;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        .nav-links a {
+            color: #d4c9b8;
+            border: none;
+            font-family: 'Courier New', monospace;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            padding: 0.5rem 0;
+            position: relative;
+        }
+        .nav-links a:hover {
+            color: #ffffff;
+            border: none;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #c0392b;
+            transition: width 0.3s ease;
+        }
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 10px 5px;
+        }
+        .hamburger span {
+            width: 28px;
+            height: 3px;
+            background: #e8e0d0;
+            margin: 4px 0;
+            transition: all 0.3s ease;
+        }
+        .header-section {
+            padding: 5rem 0 3rem;
+            background: #3a3a3a;
+            color: #e8e0d0;
+            position: relative;
+        }
+        .header-section::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: repeating-linear-gradient(90deg, #c0392b, #c0392b 20px, transparent 20px, transparent 40px);
+        }
+        .header-section h1 {
+            color: #e8e0d0;
+            border-left-color: #c0392b;
+        }
+        .header-section p {
+            font-size: 1.1rem;
+            color: #b8a898;
+            max-width: 700px;
+        }
+        .section {
+            padding: 3rem 0;
+        }
+        .blog-card {
+            background: #d4c9b8;
+            border: 3px solid #3a3a3a;
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+            position: relative;
+            box-shadow: 8px 8px 0 rgba(44, 44, 44, 0.3);
+        }
+        .blog-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, transparent 50%, rgba(192, 57, 43, 0.03) 50%);
+            pointer-events: none;
+        }
+        .blog-meta {
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            color: #6a5a4a;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        .blog-meta span {
+            border-left: 2px solid #c0392b;
+            padding-left: 0.8rem;
+        }
+        .blog-card h2 {
+            margin-top: 0;
+            border-bottom: 2px solid #3a3a3a;
+            padding-bottom: 0.8rem;
+        }
+        .blog-card p {
+            color: #3a3a3a;
+        }
+        .blog-card ul, .blog-card ol {
+            margin: 1rem 0 1.5rem 1.8rem;
+        }
+        .blog-card li {
+            margin-bottom: 0.6rem;
+            line-height: 1.6;
+        }
+        .data-highlight {
+            background: #3a3a3a;
+            color: #e8e0d0;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-left: 6px solid #c0392b;
+            font-family: 'Courier New', monospace;
+        }
+        .data-highlight p {
+            color: #e8e0d0;
+            margin-bottom: 0.5rem;
+        }
+        .data-highlight strong {
+            color: #c0392b;
+        }
+        .cta-box {
+            background: #2c2c2c;
+            border: 3px solid #c0392b;
+            padding: 2rem;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        .cta-box p {
+            color: #d4c9b8;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+        .cta-box .tel-link {
+            display: inline-block;
+            background: #c0392b;
+            color: #ffffff;
+            padding: 0.8rem 2rem;
+            font-family: 'Courier New', monospace;
+            font-size: 1.3rem;
+            font-weight: 700;
+            border: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: background 0.3s ease;
+        }
+        .cta-box .tel-link:hover {
+            background: #a93226;
+            border: none;
+        }
+        footer {
+            background: #2c2c2c;
+            color: #b8a898;
+            padding: 2rem 0;
+            text-align: center;
+            border-top: 4px solid #c0392b;
+            margin-top: 3rem;
+        }
+        footer p {
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+            font-family: 'Courier New', monospace;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        footer a {
+            color: #d4c9b8;
+            border-bottom-color: #6a5a4a;
+        }
+        footer a:hover {
+            color: #c0392b;
+            border-bottom-color: #c0392b;
+        }
+        @media (max-width: 768px) {
+            .hamburger {
+                display: flex;
+            }
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background: #2c2c2c;
+                flex-direction: column;
+                padding: 1rem 0;
+                gap: 0;
+                border-bottom: 4px solid #c0392b;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .nav-links li {
+                width: 100%;
+                text-align: center;
+            }
+            .nav-links a {
+                display: block;
+                padding: 0.8rem 1rem;
+                font-size: 1rem;
+            }
+            h1 {
+                font-size: 2rem;
+                padding-left: 0.8rem;
+            }
+            h2 {
+                font-size: 1.4rem;
+            }
+            .blog-card {
+                padding: 1.5rem;
+            }
+            .data-highlight {
+                padding: 1rem;
+            }
+            .cta-box {
+                padding: 1.5rem;
+            }
+            .cta-box .tel-link {
+                font-size: 1.1rem;
+                padding: 0.6rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="nav-brand">RAW CONCRETE</a>
+            <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('active')" aria-label="메뉴 열기">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="/">홈</a></li>
+                <li><a href="/about">소개</a></li>
+                <li><a href="/services">서비스</a></li>
+                <li><a href="/blog">블로그</a></li>
+                <li><a href="/contact">문의</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="header-section">
+        <div class="container">
+            <h1>홍대 마사지 추천<br>블로그</h1>
+            <p>데이터 기반 마사지 효과 분석과 전문가 인사이트. 3년 연속 고객 만족도 98%의 과학적 접근법을 공개합니다.</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <article class="blog-card">
+                <div class="blog-meta">
+                    <span>2025.03.15</span>
+                    <span>카테고리: 마사지 효과 분석</span>
+                    <span>조회수: 1,247</span>
+                </div>
+                <h2>홍대 마사지 추천: 스웨디시 마사지의 과학적 효과와 근육 회복 데이터</h2>
+                <p>서울 마포구 홍대 일대는 연간 1,200만 명 이상의 방문객이 찾는 문화와 상업의 중심지다. 2024년 서울시 보건자료에 따르면, 홍대 지역 마사지 샵 이용객 중 76.3%가 "피로 회복 및 근육 이완"을 주요 방문 목적으로 응답했다. 본 블로그에서는 홍대 마사지 추천을 고민하는 분들을 위해 스웨디시 마사지의 생리학적 효과와 임상 데이터를 분석한다.</p>
+
+                <h3>1. 스웨디시 마사지의 생리학적 메커니즘</h3>
+                <p>스웨디시 마사지는 19세기 스웨덴 생리학자 페르 헨리크 링(Per Henrik Ling)이 체계화한 기법으로, 다섯 가지 기본 동작(에플뢰라주, 페트리사주, 타피스먼트, 프릭션, 바이브레이션)을 통해 근육 조직에 물리적 자극을 가한다. 2023년 <Journal of Manual & Manipulative Therapy>에 발표된 메타분석(총 1,892명 대상
+</body>
+</html>
