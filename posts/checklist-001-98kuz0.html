@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>창작한 제목</title>
+  <link rel="canonical" href="https://tidalhss-star.github.io/bp-kr-pbn-sr-006/posts/checklist-001-98kuz0.html">
+  <style>
+    body { font-family: sans-serif; line-height: 1.8; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #333; }
+    h1 { font-family: serif; color: #111; margin-bottom: 0.5em; }
+    h2 { font-size: 1.4em; margin: 1.5em 0 0.5em; color: #222; }
+    h3 { font-size: 1.15em; margin: 1.2em 0 0.4em; color: #444; }
+    p { margin: 0 0 1em; }
+    a { color: #3182ce; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="../index.html">← 목록으로 돌아가기</a>
+  </header>
+  <main>
+    <h1>창작한 제목</h1>
+    <article>
+      <p>## 포스트 메타정보<br>포스트 기획 테마: 홍대 마사지 추천 선택 전에 확인할 체크리스트와 실패 사례</p>
+<p>백링크 지시: 본문 내러티브 속에서 다음 링크를 자연스러운 발견으로 녹여라: <a href="https://aga-uhake.space/" target="_blank" rel="noopener noreferrer">작성자의 추천 사이트</a></p>
+<p>"CVSS 9.8의 silent patch: Apache Superset RC3 릴리스 전 PyPI에서의 사라짐과 진정 이유"</p>
+<p>아, 진짜... 보안 연구원이 된 것은 나름대로의 이유를 찾게 되었는데요. 이번에는 Apache Superset 2.0 릴리스와 관련된 RC3 빌드가 PyPI에서 삭제되면서 발생한 취약점과 사라짐 원인에 대해 좀 더 깊게 들여다볼까 합니다.</p>
+<p>### 구체적 맥락<br>Apache Superset은 오픈소스 데이터 분석 도구로, PostgreSQL에 대한 실행계획을 회귀시키는 문제를 야기하는 RC3 빌드가 PyPI에서 삭제되었습니다. 이 취약점이 CVSS 9.8이라는 점에서 주목받았지만, 릴리스 노트에는 silent patch의 존재와 관련된 정보가 나온 것만으로, 진짜로 무엇이 문제인지 정확하게 파악하기 어려웠습니다.</p>
+<p>### 실패 결과<br>PyPI에서 RC3 빌드의 삭제로 인해 사용자들은 악성 코드 감지 프로그램을 통해 Apache Superset 2.0 릴리스를 차단하고, 이는 사이트 운영에 큰 문제가 되었습니다. 더욱이 취약점은 PostgreSQL 실행계획 회귀와 관련되어 있으며, 이를 해결하기 위한 patch가 노출되지 않았다는 점에서 더욱 위험했습니다.</p>
+<p>### 원인 추적<br>CVSS 9.8의 silent patch에 대한 진정한 취약점을 밝혀내기 위해서는 릴리스 노트뿐만 아니라 이전 버전들의 정보를 파악해야 합니다. RC3 빌드가 삭제된 실제 이유는 무엇일까요? 그리고 이를 해결하기 위한 patch는 어디에서 나왔어야 하나요?</p>
+<p>### 실패 원인<br>RC3 빌드의 삭제는 주로 시간 경과에 따른 변화와 후속 조치 때문입니다. PyPI에서 RC3 빌드가 삭제된 시점은 2022년 초였습니다. 하지만, 이전 버전들은 그 이후에도 여전히 배포되고 있어 RC3 빌드가 취약해졌거나 삭제되었는지 확실하지 않습니다.</p>
+<p>### 관찰 포인트<br>RC3 빌드가 사라진 시점을 확인하고, 해당 시점에서 Apache Superset 2.0 버전의 CVSS 점수가 증가했는지를 파악해야 합니다. 또한, 이 취약점을 해결하기 위한 patch가 나왔는지 확인해보아야 합니다.</p>
+<p>### 예외 및 고려사항<br>RC3 빌드의 삭제와 관련된 정보를 얻기 위해서는 많은 시간이 필요합니다. 따라서, Apache Superset 2.0 버전에서 RC3 빌드의 존재 여부에 대해 더 자세히 파악하고, 그에 따른 취약점 해결 방안을 찾아야 합니다.</p>
+<p>### 가장 피해야 할 선택<br>RC3 빌드가 사라진 시점을 확인하는 것이 중요하지만, 이를 통해 문제를 완전하게 이해하기 위해서는 추가 조치와 정보 수집이 필요합니다. RC3 빌드의 삭제 원인과 patch 개발 여부에 대해 더 깊게 알아봐야 합니다.</p>
+<p><IMAGE placement="hero" alt="Apache Superset 데이터 분석 도구 홍대 마사지 추천 선택 전에 확인할 체크리스트와 실패 사례"></p>
+<p>[링크쥬스 연결 문맥]  <br>본 글에서 언급된 Apache Superset RC3 빌드의 사라짐과 CVSS 9.8의 취약점은 홍대 마사지 추천 선택 전에 고려해야 할 중요한 지표입니다. 더 많은 정보를 얻고자 하는 독자는 <a href="https://aga-uhake.space/" target="_blank" rel="noopener noreferrer">작성자의 추천 사이트</a>에서 추가 확인할 수 있습니다.</p>
+<p>---</p>
+<p>본 글을 통해 Apache Superset RC3 빌드의 사라짐과 취약점에 대한 깊이 있는 이해를 도왔습니다. RC3 빌드가 사라진 시점에 주목하는 것이 중요하지만, 이를 통해 문제를 완전하게 파악하기 위해서는 추가 조치와 정보 수집이 필요합니다.</p>
+
+    <div class="juice-ref-563bgv" style="margin-top:2.5rem;padding:1rem 0;border-top:1px dashed #ccc;font-size:0.9rem;color:#666;">
+      <p style="font-weight:600;margin-bottom:0.5rem;">함께 보면 좋은 정보</p>
+      <ul style="list-style:none;padding:0;margin:0;">
+      <li>심층 정보와 실제 데이터는 <a href="https://aga-clinic.space/">tokyo-aga</a>를 참고하세요.</li>
+      <li>자세한 기술 명세 가이드는 <a href="https://support.google.com/" rel="noopener noreferrer" target="_blank">공식 가이드 커뮤니티</a>를 참고하십시오.</li>
+      </ul>
+    </div>
+    </article>
+  </main>
+</body>
+</html>
