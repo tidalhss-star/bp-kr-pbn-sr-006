@@ -369,52 +369,85 @@
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
 </head>
 <body>
-    <nav>
-        <div class="container">
-            <a href="/" class="logo">Raw Concrete</a>
-            <div class="hamburger-menu" onclick="this.classList.toggle('active'); document.querySelector('.nav-links').classList.toggle('active')">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="nav-links">
-                <a href="/">홈</a>
-                <a href="/info">정보</a>
-                <a href="/service">서비스</a>
-                <a href="/review">후기</a>
-                <a href="/contact">연락처</a>
-                <a href="tel:010-6279-0862" class="tel-link">010-6279-0862</a>
-            </div>
-        </div>
-    </nav>
 
-    <main>
-        <div class="container">
-            <section class="hero-section">
-                <p class="subtitle">홍대 마사지 추천 · 상세 정보</p>
-                <h1>완전한 정보<br>데이터 기반 접근</h1>
-                <p>홍대 마사지 추천 서비스의 모든 정보를 투명하게 공개합니다. 위치, 운영 시간, 가격 정책, 예약 절차까지 고객이 알아야 할 모든 데이터를 체계적으로 제공합니다. 3년 연속 고객 만족도 98%의 신뢰성은 정보의 투명성에서 비롯됩니다.</p>
-                <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem;">
-                    <span class="data-badge">✓ 고객 만족도 98%</span>
-                    <span class="data-badge">✓ 누적 방문 12,000+</span>
-                    <span class="data-badge">✓ 재방문율 76%</span>
-                </div>
-            </section>
+<main>
+<div class="container">
+<section class="hero-section">
+<p class="subtitle">홍대 마사지 추천 · 매장 안내</p>
+<h1>홍대 마사지, 방문 전 확인할 정보</h1>
+</section>
 
-            <div class="info-grid">
-                <div class="info-card">
-                    <div class="card-title">위치 및 접근성</div>
-                    <div class="card-content">
-                        <p><span class="label">주소</span> 서울특별시 마포구 홍익로 6길 23, 3층</p>
-                        <p><span class="label">지하철</span> 홍대입구역 3번 출구 도보 4분</p>
-                        <p><span class="label">버스</span> 홍대입구 정류장 하차 3분</p>
-                        <p><span class="label">주차</span> 건물 내 주차장 2시간 무료</p>
-                        <p><span class="label">건물</span> 엘리베이터, 장애인 편의시설 완비</p>
-                        <p style="margin-top: 1rem; font-size: 0.85rem; color: #888078;">* 홍대 마사지 추천 데이터 기준, 접근성 평가 A+ 등급</p>
-                    </div>
-                </div>
-                <div class="info-card">
-                    <div class="card-title">운영 시간</div>
-                    <div
+<section>
+<h2 class="text-accent">이용 안내</h2>
+<p class="text-raw">홍대는 유동 인구가 많고 다양한 업종이 밀집한 상권으로, 마사지 매장 또한 규모와 운영 방식이 매장마다 다르다. 코스 구성, 이용 시간, 예약 방식 등은 매장별로 차이가 있으므로 방문 전 확인하는 절차가 필요하다.</p>
+</section>
+
+<section class="info-grid">
+<div class="info-card">
+<p class="card-title">코스 구성</p>
+<p class="card-content">부위별, 시간별로 코스가 나뉘는 경우가 많으며 세부 구성은 매장 문의를 통해 확인할 수 있다.</p>
+</div>
+<div class="info-card">
+<p class="card-title">이용 시간</p>
+<p class="card-content">평균 소요 시간은 코스 종류에 따라 달라지며, 대기 상황에 따라 조정될 수 있다.</p>
+</div>
+<div class="info-card">
+<p class="card-title">예약 방법</p>
+<p class="card-content">전화 문의를 통한 사전 예약이 일반적이며, 원하는 시간대가 있다면 미리 연락하는 편이 좋다.</p>
+</div>
+<div class="info-card">
+<p class="card-title">위치 확인</p>
+<p class="card-content"><span class="data-badge">홍대 인근</span> 정확한 위치와 찾아오는 길은 문의 시 안내받을 수 있다.</p>
+</div>
+</section>
+
+<section>
+<h2>가격이 결정되는 구조</h2>
+<table class="pricing-table">
+<tr><td class="label">코스 시간</td><td>시간이 길어질수록 관리 범위가 넓어져 비용에 영향을 준다.</td></tr>
+<tr><td class="label">관리사 지정</td><td>지정 여부에 따라 추가 비용이 발생할 수 있다.</td></tr>
+<tr><td class="label">이용 시간대</td><td>평일·주말, 낮·밤 시간대에 따라 조건이 달라질 수 있다.</td></tr>
+<tr><td class="label">부가 옵션</td><td>추가 관리나 옵션 선택 여부에 따라 총 비용이 달라진다.</td></tr>
+</table>
+<p>정확한 금액은 매장 정책에 따라 달라지므로, 위 항목을 참고해 문의 시 함께 확인하는 것을 권장한다.</p>
+</section>
+
+<section class="faq-section">
+<h2>자주 묻는 질문</h2>
+<div class="faq-item">
+<p class="question">예약은 어떻게 하나요?</p>
+<p class="answer">전화로 희망 날짜와 시간을 안내하면 가능 여부를 확인받을 수 있다.</p>
+</div>
+<div class="faq-item">
+<p class="question">주차가 가능한가요?</p>
+<p class="answer">매장마다 주차 여건이 다르므로 방문 전 문의하는 것이 정확하다.</p>
+</div>
+<div class="faq-item">
+<p class="question">당일 예약도 가능한가요?</p>
+<p class="answer">상황에 따라 가능할 수 있으나 대기 시간이 발생할 수 있어 미리 연락하는 편이 안전하다.</p>
+</div>
+<div class="faq-item">
+<p class="question">관리사를 지정할 수 있나요?</p>
+<p class="answer">매장에 따라 지정 가능 여부와 조건이 다르므로 예약 시 함께 확인하는 것이 좋다.</p>
+</div>
+</section>
+
+<section>
+<h2>방문 전 자주 하는 실수</h2>
+<ul>
+<li>원하는 코스를 구체적으로 전달하지 않아 현장에서 다시 상담받는 경우</li>
+<li>이용 시간대를 확인하지 않고 방문해 대기 시간이 길어지는 경우</li>
+<li>관리사 지정 여부에 따른 추가 비용을 미리 확인하지 않는 경우</li>
+</ul>
+</section>
+
+<section class="cta-section">
+<p class="map-placeholder">홍대 지역 내 위치 · 상세 위치는 문의 시 안내</p>
+<a class="cta-button tel-link" href="tel:010-6279-0862">010-6279-0862</a>
+</section>
+</div>
+</main>
+
+
 </body>
 </html>
