@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 (1/2) · kr-pbn-sr-006</title>
+  <meta name="description" content="kr-pbn-sr-006에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://hongdae-body-care.node-link.shop/posts.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ *, *::before, *::after {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ }
+ html {
+ font-size: 16px;
+ scroll-behavior: smooth;
+ -webkit-text-size-adjust: 100%;
+ }
+ body {
+ font-family: 'Courier New', 'Nanum Gothic', 'Malgun Gothic', monospace, sans-serif;
+ background-color: #e8e0d0;
+ color: #2c2c2c;
+ line-height: 1.7;
+ min-height: 100vh;
+ position: relative;
+ overflow-x: hidden;
+ }
+ body::before {
+ content: '';
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background-image: 
+ repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(180, 170, 150, 0.15) 2px, rgba(180, 170, 150, 0.15) 4px),
+ repeating-linear-gradient(90deg, transparent, transparent 3px, rgba(160, 150, 130, 0.1) 3px, rgba(160, 150, 130, 0.1) 5px);
+ pointer-events: none;
+ z-index: -1;
+ }
+ a {
+ color: #3a3a3a;
+ text-decoration: none;
+ border-bottom: 2px solid #8a7a6a;
+ transition: all 0.2s ease;
+ }
+ a:hover {
+ color: #1a1a1a;
+ border-bottom-color: #c0392b;
+ }
+ img {
+ max-width: 100%;
+ height: auto;
+ display: block;
+ }
+ h1, h2, h3, h4 {
+ font-family: 'Courier New', 'Nanum Gothic', monospace;
+ font-weight: 700;
+ letter-spacing: -0.5px;
+ text-transform: uppercase;
+ }
+ h1 {
+ font-size: 2.8rem;
+ line-height: 1.1;
+ margin-bottom: 1.2rem;
+ border-left: 6px solid #c0392b;
+ padding-left: 1.2rem;
+ color: #2c2c2c;
+ }
+ h2 {
+ font-size: 1.8rem;
+ line-height: 1.2;
+ margin-bottom: 1rem;
+ margin-top: 2.5rem;
+ padding-bottom: 0.5rem;
+ border-bottom: 3px solid #3a3a3a;
+ }
+ h3 {
+ font-size: 1.3rem;
+ line-height: 1.3;
+ margin-bottom: 0.8rem;
+ margin-top: 1.8rem;
+ }
+ p {
+ margin-bottom: 1.2rem;
+ font-size: 1.05rem;
+ }
+ .text-accent {
+ color: #c0392b;
+ font-weight: 700;
+ }
+ .text-raw {
+ font-family: 'Courier New', monospace;
+ letter-spacing: 1px;
+ text-transform: uppercase;
+ }
+ .container {
+ max-width: 1100px;
+ margin: 0 auto;
+ padding: 0 20px;
+ }
+ nav {
+ background: #2c2c2c;
+ padding: 0;
+ position: sticky;
+ top: 0;
+ z-index: 100;
+ border-bottom: 4px solid #c0392b;
+ }
+ .nav-container {
+ max-width: 1100px;
+ margin: 0 auto;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 0 20px;
+ min-height: 60px;
+ }
+ .nav-brand {
+ color: #e8e0d0;
+ font-family: 'Courier New', monospace;
+ font-size: 1.4rem;
+ font-weight: 700;
+ text-transform: uppercase;
+ letter-spacing: 3px;
+ border: none;
+ }
+ .nav-brand:hover {
+ color: #c0392b;
+ border: none;
+ }
+ .nav-links {
+ display: flex;
+ gap: 2rem;
+ list-style: none;
+ }
+ .nav-links a {
+ color: #d4c9b8;
+ border: none;
+ font-family: 'Courier New', monospace;
+ text-transform: uppercase;
+ font-size: 0.85rem;
+ letter-spacing: 1px;
+ padding: 0.5rem 0;
+ position: relative;
+ }
+ .nav-links a:hover {
+ color: #ffffff;
+ border: none;
+ }
+ .nav-links a::after {
+ content: '';
+ position: absolute;
+ bottom: 0;
+ left: 0;
+ width: 0;
+ height: 2px;
+ background: #c0392b;
+ transition: width 0.3s ease;
+ }
+ .nav-links a:hover::after {
+ width: 100%;
+ }
+ .hamburger {
+ display: none;
+ flex-direction: column;
+ cursor: pointer;
+ background: none;
+ border: none;
+ padding: 10px 5px;
+ }
+ .hamburger span {
+ width: 28px;
+ height: 3px;
+ background: #e8e0d0;
+ margin: 4px 0;
+ transition: all 0.3s ease;
+ }
+ .header-section {
+ padding: 5rem 0 3rem;
+ background: #3a3a3a;
+ color: #e8e0d0;
+ position: relative;
+ }
+ .header-section::after {
+ content: '';
+ position: absolute;
+ bottom: 0;
+ left: 0;
+ width: 100%;
+ height: 8px;
+ background: repeating-linear-gradient(90deg, #c0392b, #c0392b 20px, transparent 20px, transparent 40px);
+ }
+ .header-section h1 {
+ color: #e8e0d0;
+ border-left-color: #c0392b;
+ }
+ .header-section p {
+ font-size: 1.1rem;
+ color: #b8a898;
+ max-width: 700px;
+ }
+ .section {
+ padding: 3rem 0;
+ }
+ .blog-card {
+ background: #d4c9b8;
+ border: 3px solid #3a3a3a;
+ padding: 2.5rem;
+ margin-bottom: 2.5rem;
+ position: relative;
+ box-shadow: 8px 8px 0 rgba(44, 44, 44, 0.3);
+ }
+ .blog-card::before {
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background: linear-gradient(135deg, transparent 50%, rgba(192, 57, 43, 0.03) 50%);
+ pointer-events: none;
+ }
+ .blog-meta {
+ font-family: 'Courier New', monospace;
+ font-size: 0.85rem;
+ color: #6a5a4a;
+ text-transform: uppercase;
+ letter-spacing: 1px;
+ margin-bottom: 1rem;
+ display: flex;
+ gap: 1.5rem;
+ flex-wrap: wrap;
+ }
+ .blog-meta span {
+ border-left: 2px solid #c0392b;
+ padding-left: 0.8rem;
+ }
+ .blog-card h2 {
+ margin-top: 0;
+ border-bottom: 2px solid #3a3a3a;
+ padding-bottom: 0.8rem;
+ }
+ .blog-card p {
+ color: #3a3a3a;
+ }
+ .blog-card ul, .blog-card ol {
+ margin: 1rem 0 1.5rem 1.8rem;
+ }
+ .blog-card li {
+ margin-bottom: 0.6rem;
+ line-height: 1.6;
+ }
+ .data-highlight {
+ background: #3a3a3a;
+ color: #e8e0d0;
+ padding: 1.5rem;
+ margin: 1.5rem 0;
+ border-left: 6px solid #c0392b;
+ font-family: 'Courier New', monospace;
+ }
+ .data-highlight p {
+ color: #e8e0d0;
+ margin-bottom: 0.5rem;
+ }
+ .data-highlight strong {
+ color: #c0392b;
+ }
+ .cta-box {
+ background: #2c2c2c;
+ border: 3px solid #c0392b;
+ padding: 2rem;
+ text-align: center;
+ margin: 2rem 0;
+ }
+ .cta-box p {
+ color: #d4c9b8;
+ font-size: 1.1rem;
+ margin-bottom: 1rem;
+ }
+ .cta-box .tel-link {
+ display: inline-block;
+ background: #c0392b;
+ color: #ffffff;
+ padding: 0.8rem 2rem;
+ font-family: 'Courier New', monospace;
+ font-size: 1.3rem;
+ font-weight: 700;
+ border: none;
+ text-transform: uppercase;
+ letter-spacing: 2px;
+ transition: background 0.3s ease;
+ }
+ .cta-box .tel-link:hover {
+ background: #a93226;
+ border: none;
+ }
+ footer {
+ background: #2c2c2c;
+ color: #b8a898;
+ padding: 2rem 0;
+ text-align: center;
+ border-top: 4px solid #c0392b;
+ margin-top: 3rem;
+ }
+ footer p {
+ font-size: 0.85rem;
+ margin-bottom: 0.5rem;
+ font-family: 'Courier New', monospace;
+ text-transform: uppercase;
+ letter-spacing: 1px;
+ }
+ footer a {
+ color: #d4c9b8;
+ border-bottom-color: #6a5a4a;
+ }
+ footer a:hover {
+ color: #c0392b;
+ border-bottom-color: #c0392b;
+ }
+ @media (max-width: 768px) {
+ .hamburger {
+ display: flex;
+ }
+ .nav-links {
+ display: none;
+ position: absolute;
+ top: 60px;
+ left: 0;
+ width: 100%;
+ background: #2c2c2c;
+ flex-direction: column;
+ padding: 1rem 0;
+ gap: 0;
+ border-bottom: 4px solid #c0392b;
+ }
+ .nav-links.active {
+ display: flex;
+ }
+ .nav-links li {
+ width: 100%;
+ text-align: center;
+ }
+ .nav-links a {
+ display: block;
+ padding: 0.8rem 1rem;
+ font-size: 1rem;
+ }
+ h1 {
+ font-size: 2rem;
+ padding-left: 0.8rem;
+ }
+ h2 {
+ font-size: 1.4rem;
+ }
+ .blog-card {
+ padding: 1.5rem;
+ }
+ .data-highlight {
+ padding: 1rem;
+ }
+ .cta-box {
+ padding: 1.5rem;
+ }
+ .cta-box .tel-link {
+ font-size: 1.1rem;
+ padding: 0.6rem 1.5rem;
+ }
+ }
+ </style>
+  <meta property="og:title" content="글 목록 (1/2) · kr-pbn-sr-006">
+  <meta property="og:description" content="kr-pbn-sr-006에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://hongdae-body-care.node-link.shop/posts.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header class="header-section">
+ <div class="container">
+ <h1>홍대 마사지 추천<br>블로그</h1>
+ <p>데이터 기반 마사지 효과 분석과 전문가 인사이트. 3년 연속 고객 만족도 98%의 과학적 접근법을 공개합니다.</p>
+ </div>
+ </header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 38개 · 1/2 페이지</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/checklist-001-98kuz0.html">홍대 마사지 추천</a>
+        <p class="post-item__summary">홍대 지역은 젊은 층과 문화 예술이 어우러진 곳으로 다양한 마사지 업소가 밀집해 있습니다. 각 업소는 고객의 피로 회복과 스트레스 해소를 목표로 전문적인 프로그램을 운영하며, 접근성이 좋은 역세권에</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-001-r0r87x.html">홍대 마사지 추천</a>
+        <p class="post-item__summary">바쁜 일상 속에서 지친 몸과 마음을 달래기 위해 홍대 마사지 추천 업소를 찾는 분들이 늘어나고 있습니다. 홍대 일대는 다양한 콘셉트와 전문 케어 프로그램을 갖춘 매장이 밀집해 있어 접근성이 뛰어나며</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260704-112.html">강서 노래방 투어: 깔끔한 시설과 서비스가 만족스러운 최신 스팟</a>
+        <p class="post-item__summary">누구나 가볍게 즐기고 일상의 누적된 피로를 풀 수 있는 가장 대중적인 놀이 공간은 노래방입니다. 최근 강서 일대에는 낡은 지하실 느낌에서 탈피해 공기청정기와 고화질 대형 화면을 갖춘 프리미엄 노래방</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-1159.html">홍대 마사지 추천 선택 전에 보는 4</a>
+        <p class="post-item__summary">홍대 마사지 추천 정보가 많아질수록 중요한 것은 더 많은 페이지가 아니라 더 정확한 비교 순서입니다. 홍대 기준으로 보면 같은 말처럼 보여도 실제로는 다른 의도를 가진 안내가 섞여 있습니다.</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260705-376.html">홍대의 번잡한 소음 속에서 조용한 마사지숍을 찾아내는 현명한 선택 기준</a>
+        <p class="post-item__summary">하루 종일 복잡한 인파 속에서 지쳐버린 몸을 이끌고 홍대를 찾으시는 발걸음을 깊이 헤아려 봅니다. ^^ 화려한 거리 뒤편에 숨은 어깨 통증을 해결하려면 마사지숍을 선택할 때 소음 차단 여부를 고르는</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0209.html">홍대 마사지 추천 장소에서 즐기는 마포 홍대 단체 가라오케 예약 가이드</a>
+        <p class="post-item__summary">오랜만에 모인 동료들과 피로를 풀기 위해 방문한 곳에서 예기치 못한 동선 꼬임을 겪는 분들이 많습니다. 몸의 긴장을 완화하려 찾았던 홍대 마사지 추천 시설 근처에서 바로 뒤이어 대규모 모임을 이어가</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0210.html">홍대 마사지 추천 리스트 확인하며 배우는 구글 알고리즘 고신용 도메인 보증 카드 발급</a>
+        <p class="post-item__summary">많은 이들이 검색 상위 노출을 위해 무조건적인 백링크 양산만이 답이라고 오해하곤 합니다. 하지만 질 낮은 링크의 남발은 오히려 사이트의 신뢰도를 떨어뜨리는 지름길이 될 수 있습니다. 이는 마치 홍대</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0211.html">홍대 마사지 추천 정보와 비교하는 구글 봇 정밀 검진 및 크롤 버짓 밀착 간호</a>
+        <p class="post-item__summary">최적화된 사이트를 운영하기 위해서는 기술적인 요구 사항을 충족하는 것이 무엇보다 중요합니다. 사이트 맵이 정확히 작동하는지, 불필요한 리다이렉트가 발생하지 않는지, 그리고 각 페이지의 로딩 속도가 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0212.html">홍대 마사지 추천 업체 선정처럼 중요한 구글 알고리즘 감점 치료 및 백링크 수술실</a>
+        <p class="post-item__summary">여러분은 현재 운영 중인 웹사이트가 검색 순위에서 갑자기 밀려났을 때 그 원인을 명확히 알고 계십니까? 많은 경우, 과거에 무분별하게 생성했던 저품질 백링크가 뒤늦게 감점 요인으로 작용하고 있을 가</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0213.html">홍대 마사지 추천 서비스 이용 시 고려해야 할 셔츠룸 예약 프로세스</a>
+        <p class="post-item__summary">홍대 마사지 추천 정보를 탐색하다 보면 자연스럽게 밤 시간대 여가 문화로 관심이 이어지는 경우가 많습니다. 특히 셔츠룸과 같은 프라이빗한 공간을 방문할 계획이라면 체계적인 절차를 이해하는 것이 중요</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0214.html">홍대 마사지 추천 후 비교하는 마포 단체 회식용 대형 룸 노래방 가격 정보</a>
+        <p class="post-item__summary">업무를 마친 뒤 홍대 마사지 추천 리스트를 확인하는 직장인들이라면 자연스럽게 회식 장소로 눈길을 돌리기 마련입니다. 마포 지역에는 수많은 유흥 시설이 존재하지만, 단체 인원을 수용할 수 있는 대형 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0215.html">홍대 마사지 추천 플랫폼과 자세히 보기</a>
+        <p class="post-item__summary">많은 이들이 홍대 마사지 추천 정보를 검색하며 자신의 요구사항에 딱 맞는 업체를 찾고자 합니다. 하지만 정보의 홍수 속에서 실패하는 지점은 너무나 분명합니다. 자신의 목적과 상관없는 무분별한 링크를</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0216.html">홍대 마사지 추천 기반의 마포 홍대 로컬 럭셔리 밤문화 가이드 확인법</a>
+        <p class="post-item__summary">홍대 마사지 추천 리스트를 검토할 때 많은 분이 지역 밤문화까지 한 번에 고려하곤 합니다. 마포구 일대는 로컬 감성과 럭셔리한 분위기가 공존하여 전략적인 접근이 필요합니다. 완벽한 밤을 보내기 위해</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0217.html">홍대 마사지 추천 후기에서 배우는 마포 코인노래방 방음 시설 비교 가이드 활용법</a>
+        <p class="post-item__summary">친구들과 홍대 마사지 추천 리스트를 공유하며 피로를 풀던 중, 근처 코인노래방에서 옆 방의 소음이 그대로 들려 당황했던 경험이 있습니다. 밀폐된 공간에서 노래를 부르는 것이 취미라면 누구나 소음 차</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0218.html">홍대 마사지 추천 리스트와 함께 확인하는 마포 유흥 투명 정찰제 가격 정보 디렉토리 활용 전략</a>
+        <p class="post-item__summary">홍대 마사지 추천 장소를 탐색하는 분들 중에는 마포 지역의 다른 여가 시설에 대해서도 가격 투명성을 걱정하는 경우가 많습니다. 일부에서는 정찰제가 무의미하다고 오해하지만, 최근에는 운영 방식이 점차</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0219.html">홍대 마사지 추천 장소와 을지로 풋쌤 동대문점의 특징</a>
+        <p class="post-item__summary">피로가 누적된 상태에서 제대로 된 휴식을 취하려면 적절한 환경과 기술을 갖춘 곳을 찾는 것이 필수적이다. 홍대 마사지 추천 정보를 검색하는 사람들은 대개 접근성이 좋으면서도 실력 있는 관리사가 상주</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0220.html">홍대 마사지 추천 장소에서 느낀 피로를 잊고 떠나는 마포/합정 인디 소셜 라운지 가이드 탐색</a>
+        <p class="post-item__summary">홍대 마사지 추천 리스트를 정독하며 고단한 몸을 달래본 적이 있으신가요. 그 후 마음의 활력까지 채우고 싶다면 주변의 소셜 라운지로 발걸음을 옮기는 것도 좋은 방법입니다. 마포와 합정 일대에는 소규</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260719-0221.html">홍대 마사지 추천, 마포 셔츠룸 후기 소셜 마케팅 성공 가이드</a>
+        <p class="post-item__summary">홍대 마사지 추천 정보를 찾으시는 분들께, 마포 셔츠룸의 실질적인 후기를 기반으로 한 소셜 마케팅 전략을 안내해 드립니다. 단순히 업체를 홍보하는 것을 넘어, 잠재 고객의 신뢰를 얻고 실질적인 예약</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0133.html">홍대 마사지 추천 업체를 찾는 것처럼 꼼꼼한 홍대 노래방 추천정보 확인법</a>
+        <p class="post-item__summary">피로 회복을 위해 홍대 마사지 추천 정보를 검색하는 과정과 즐거운 밤을 위해 노래방을 찾는 과정은 묘하게 닮아 있습니다. 정보의 홍수 속에서 옥석을 가려내기 위해서는 체계적인 접근이 필요합니다. 가</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/gemini-coverage-20260721-0134.html">홍대 마사지 추천 기준만큼 중요한 공덕 셔츠룸 추천정보 가격 판단 가이드</a>
+        <p class="post-item__summary">홍대 마사지 추천 업체를 선정할 때 비용과 서비스 퀄리티를 대조하는 것처럼, 공덕 셔츠룸을 선택할 때도 명확한 가격 판단 기준이 필요합니다. 가격이 저렴하다고 무조건 좋은 것은 아니며, 비용 대비 </p>
+      </li>
+      </ul>
+    <nav class="pager">
+      <span class="pager__current">1</span>
+      <a class="pager__link" href="posts-2.html">2</a>
+    </nav>
+    </main>
+  </div>
+</body>
+</html>
